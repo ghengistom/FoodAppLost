@@ -1,5 +1,57 @@
-extends layout
 
-block content
-  h1= title
-  p The Food #{title}
+
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    link(href='reset.css', rel='stylesheet', type='text/css')
+    link(href='semantic/dist/semantic.min.css', rel='stylesheet', type='text/css')
+    script(src='semantic/dist/semantic.min.js')
+    link(href='style.css', rel='stylesheet', type='text/css')
+    title All about food
+  body
+    header
+      .ui.teal.message
+        h1 All food pic. All the time
+      .ui.inverted.teal.menu
+        a.active.item(href='#') Sign up!
+        a.item(href='#') FAQ
+        a.item(href='#') Support
+        .right.menu
+          .item
+            .ui.action.left.icon.input
+              i.search.icon  
+              input(placeholder='Search', type='text')
+              button.ui.button Submit
+          a.item Link
+    main
+      .ui.container
+        p main part
+        .ui.grid
+          .four.wide.column
+            a(href='#')
+              img.img_small(src='http://placehold.it/750x450', alt='')
+          .four.wide.column
+            a(href='#')
+              img.img_small(src='http://placehold.it/750x450', alt='')
+          .four.wide.column
+            a(href='#')
+              img.img_small(src='http://placehold.it/750x450', alt='')
+          .four.wide.column
+            a(href='#')
+              img.img_small(src='http://placehold.it/750x450', alt='')
+          .four.wide.column
+            a(href='#')
+              img.img_small(src='http://placehold.it/750x450', alt='')
+          .four.wide.column
+            a(href='#')
+              img.img_small(src='http://placehold.it/750x450', alt='')
+          .four.wide.column
+            a(href='#')
+              img.img_small(src='http://placehold.it/750x450', alt='')
+          .four.wide.column
+            a(href='#')
+              img.img_small(src='http://placehold.it/750x450', alt='')
+    footer.ui.segment.inverted
+      p Copyright © All food pictures, all the time Website 2016

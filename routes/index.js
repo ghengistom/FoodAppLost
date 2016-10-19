@@ -6,4 +6,19 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Muncher App!' });
 });
 
+
+router.get('/signin', function(req, res, next) {
+  res.render('signin', {
+    title: 'Signin'
+  });
+});
+
+router.get('/contact', function(req, res, next) {
+  res.render('contact', {
+    title: 'Contact'
+  });
+});
+
+
+
 module.exports = router;

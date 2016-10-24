@@ -1,4 +1,6 @@
+
 {
+  "_comment": "this is a comment// this json package makes node really easy to use",
   "name": "FoodApp",
   "version": "0.0.0",
   "private": true,

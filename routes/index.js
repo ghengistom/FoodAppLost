@@ -35,12 +35,12 @@ router.get('/images', function(req, res, next) {
   var results = [];
 
 // folder containing images
-  dir = './public/images'
+  dir = 'public/images'
   //this will loop through every image
   filesystem.readdirSync(dir).forEach(function(file) {
 
     //save filepath
-    var pathToImg = dir+'/'+file;
+    var pathToImg = 'images/'+file;
 
     //make a javascript object
     var imageHolder = {

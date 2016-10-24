@@ -13,13 +13,21 @@ router.get('/', function(req, res, next) {
 });
 
 
+
+
+
+
+
+
+
 //Array to store filepaths to images
 //var imagePathArray = new Array();
 //var obj;
 
-//create a big string to append little strings to
-//so i can return the big string
-var bigImageString = "null";
+var images = {
+  imagesJSON:[]
+};
+
 
 /* GET home page. */
 router.get('/images', function(req, res, next) {
@@ -39,47 +47,31 @@ router.get('/images', function(req, res, next) {
       imgSrcHtml: pathToImg,
       imgNameHtml: file
     }
-
-    if(bigImageString==null)
-    {
-      bigImageString = JSON.stringify(imageHolder);
-    }
-    else
-    {
-      bigImageString.concat(individualImage);
-    }
-
-
     //stringify the object we are on
-    var individualImage = JSON.stringify(imageHolder);
+    images.imagesJSON.push(imageHolder);
 
-    console.log(individualImage);
-
-    //append this to big ass stringify
-
-
-    //take this beast send it to client parsed out
-
-
-    //obj = JSON.stringify(file);
-    //console.log(obj);
-    //store each path into an array
-    //imagePathArray.push(obj);
-    //need to convert each index/path into json object
-  //  console.log(file);
   });
-  console.log(bigImageString);
 
-  res.json(JSON.parse(bigImageString));
-
-
-//inside routes file create a get method at uri"/images"
-//	inside get method
-//		call function to get array of json objects
-
+  res.json(images);
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 router.get('/signin', function(req, res, next) {
@@ -93,8 +85,6 @@ router.get('/contact', function(req, res, next) {
     title: 'Contact'
   });
 });
-
-
 
 
 

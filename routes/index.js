@@ -36,6 +36,8 @@ router.get('/images', function(req, res, next) {
 
 // folder containing images
   dir = 'public/images'
+  
+  
   //this will loop through every image
   filesystem.readdirSync(dir).forEach(function(file) {
 
@@ -47,7 +49,7 @@ router.get('/images', function(req, res, next) {
       imgSrcHtml: pathToImg,
       imgNameHtml: file
     }
-    //stringify the object we are on
+    //push each object into array
     images.imagesJSON.push(imageHolder);
 
   });
@@ -87,23 +89,6 @@ router.get('/contact', function(req, res, next) {
 });
 
 
-
-
-router.get('/', function(req, res, next) {
-
-  var filesystem = require("fs");
-  var results = [];
-
-  dir = '.' // project root directory
-  filesystem.readdirSync(dir).forEach(function(file) {
-
-    file = dir+'/'+file;
-    console.log(file);
-  });
-
-  res.render('costumes', { title: 'Costumes' });
-
-});
 
 
 

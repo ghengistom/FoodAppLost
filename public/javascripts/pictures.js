@@ -12,10 +12,6 @@ $( document ).ready(function() {
     //source "src" attribute is = pathToImg
     //Append this to pictureContainer element
 
-
-
-
-
   });
 
 
